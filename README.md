@@ -37,5 +37,53 @@ Display version and help
 Try to transform given sample file
 > hoppscotch-transform -p ./samples/postman-env.zip -f
 
+Example output file: 
+```
+[
+    {
+        "name": "Development",
+        "variables": [
+            {
+                "key": "Key-One",
+                "value": "Value-One"
+            },
+            {
+                "key": "Key-Two",
+                "value": ""
+            },
+            {
+                "key": "Key-Three",
+                "value": "Value with nested variable <<Surprise>>"
+            },
+            {
+                "key": "Surprise",
+                "value": "It's me!"
+            }
+        ]
+    },
+    {
+        "name": "Test",
+        "variables": [
+            {
+                "key": "SecondEnvVar",
+                "value": "SecondEnvValue"
+            },
+            {
+                "key": "Key-Two",
+                "value": ""
+            },
+            {
+                "key": "Key-Three",
+                "value": "Value with nested variable <<Surprise>>"
+            },
+            {
+                "key": "Surprise",
+                "value": "It's me, again!"
+            }
+        ]
+    }
+]
+```
+
 # Contribute
 Feel free to extend this tool with more features!
